@@ -1,0 +1,140 @@
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 20px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff9900;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #ff9900;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin: 20px 0;
+    }
+  }
+
+  /*  */
+  .about-page-container {
+    text-align: center;
+    padding: 40px 20px;
+    color: #003366; /* Dark blue color */
+  }
+  
+  .about-ceo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-ceo-photo {
+    margin-bottom: 20px;
+  }
+  
+  .about-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular photo */
+    border: 4px solid #003366; /* Optional: dark blue border */
+  }
+  
+  .about-ceo-text {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .about-ceo-text h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+  }
+  
+  .about-ceo-text p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .about-ceo-section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .about-ceo-photo {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .about-ceo-text {
+      text-align: left;
+    }
+  }

@@ -1,0 +1,1090 @@
+
+.video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video positioned on the right side */
+.side-video {
+  position: absolute;
+  top: 32%;
+  right: 0;
+  width: 50vw; /* Video takes up 30% of the width */
+  height: auto;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/* Styling the content */
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw; /* Content takes up 70% of the width */
+  color: white;
+  text-align: center;
+}
+
+h1, p {
+  z-index: 1;
+}
+
+/* Hide video on mobile sizes */
+@media (max-width: 768px) {
+  .side-video {
+    display: none;
+  }
+  .content {
+    width: 100vw; /* Make content full width on mobile */
+  }
+}
+
+/* Basic styling for the navbar */
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7); /* Ensure background color for mobile */
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    transition: max-height 0.3s ease; /* Smooth transition */
+    max-height: 0; /* Hide menu initially */
+    overflow: hidden;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+    max-height: 300px; /* Adjust based on content size */
+  }
+
+  .nav-toggle {
+    display: flex; /* Show toggle button on mobile */
+  }
+}
+
+
+
+
+/* Container for the Testimonials */
+.testimonials-container {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: hidden; /* Hide the overflow for the sliding effect */
+}
+
+.testimonials-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Slider for the Testimonials */
+.testimonials-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slide-left 20s linear infinite; /* Animation */
+}
+
+/* Individual Testimonial Card */
+.testimonial {
+  min-width: 300px;
+  margin: 0 1rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonial h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.testimonial .title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #777;
+}
+
+.testimonial .text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Slide Animation */
+@keyframes slide-left {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-container {
+      padding: 2rem 1rem;
+  }
+
+  .testimonial {
+      min-width: 250px;
+  }
+
+  @keyframes slide-left {
+      0% {
+          transform: translateX(0%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+}
+
+
+.fullscreen-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style for the Logo Image */
+.fullscreen-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the logo scales properly within the container */
+}
+
+
+
+.about-us {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #666;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.team-member {
+  margin-bottom: 20px;
+}
+
+.team-member h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-section a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Style each input field */
+form div {
+  margin: 25px;
+ 
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for textarea */
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+  
+  button[type="submit"] {
+    font-size: 16px;
+  }
+}
+
+
+
+.client-showcase {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.client-showcase h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.client-showcase h2 span {
+  color: #f57c00; /* You can adjust the color */
+}
+
+.client-showcase p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.client-card {
+  border: 2px solid #f57c00;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.client-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* service */
+.services {
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #f36a1b; /* Adjust color to match the design */
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 160px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Added for image scaling */
+}
+
+.service-card:hover img {
+  transform: scale(1.9); /* Scale the image up on hover */
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+
+/* about */
+.about-us-container {
+  font-family: Arial, sans-serif;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.intro-text h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.intro-video img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info-section {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.info-text p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  padding: 40px 20px;
+}
+
+.stats-item h2 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #003366;
+}
+
+.stats-item p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.text-section {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.text-section p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.person-info {
+  margin-top: 20px;
+}
+
+.contact-icon {
+  margin-top: 20px;
+}
+
+.whatsapp-icon {
+  font-size: 40px;
+  color: #25D366;
+}
+
+.service-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.service-text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.service-highlight {
+  font-weight: bold;
+}
+
+.service-info {
+  margin-top: 20px;
+}
+
+.service-contact {
+  margin-top: 20px;
+}
+
+.service-whatsapp-icon {
+  font-size: 40px;
+  color: #25D366;
+}
+
+.service-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.service-profile-img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.certifications-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.certifications-title {
+  font-size: 2rem;
+  color: #2b3a67;
+  margin-bottom: 20px;
+}
+
+.certifications-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certification-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+}
+
+.cert-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.certification-item p {
+  font-size: 0.875rem;
+  color: #333;
+  text-align: center;
+}
+
+/* src/components/AboutUs.css */
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision, .mission {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.vision {
+  border-right: 2px solid #ddd;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+
+
+
+/* General styling for the container and title */
+.career-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.career-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.category {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.category img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+.category h2 {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Responsive design: Adjust grid for smaller screens */
+@media (max-width: 768px) {
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .career-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-title {
+    font-size: 1.75rem;
+  }
+
+  .category img {
+    height: 150px;
+  }
+
+  .category h2 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
+.career-page {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Job grid styles */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.job-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .job-card {
+    padding: 10px;
+  }
+
+  .job-card h3 {
+    font-size: 18px;
+  }
+}
+
+
+
+
+.contact-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+}
+
+.contact-info h2 {
+  color: #333;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="tel"],
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button2 {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* Default button styling */
+.back-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #011830;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effects */
+.back-button:hover {
+  background-color: #032e6f;
+  transform: scale(1.05);
+}
+
+/* Responsive styles for tablets (width: 768px and above) */
+@media (min-width: 768px) {
+  .back-button {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+}
+
+/* Responsive styles for larger screens (width: 1024px and above) */
+@media (min-width: 1024px) {
+  .back-button {
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+}
+
+/* Mobile styles (width: 480px and below) */
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+
+.what-we-offer {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f7f7f7; /* Optional background */
+}
+
+.what-we-offer h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.what-we-offer h2:after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #00aaff; /* Line color */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.offer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 20px;
+}
+
+.offer-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+}
+
+.offer-icon {
+  font-size: 2.5rem;
+  color: #00aaff; /* Icon color */
+  margin-bottom: 20px;
+}
+
+.offer-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.offer-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .offer-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-card {
+    width: 100%;
+  }
+}
+
+.unique-career-section {
+  padding: 40px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.unique-career-heading {
+  font-size: 1.2rem;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.unique-career-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.unique-career-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.unique-career-card {
+  flex: 1;
+  max-width: 300px;
+  margin: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unique-career-icon img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.unique-career-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+/* Container for the entire section */
+.team-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.team-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 40px;
+}
+
+/* Flex container for team members */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each team member card */
+.team-card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image styling for circular photos */
+.team-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.team-position {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0059b3;
+  margin-bottom: 15px;
+}
+
+.team-description {
+  font-size: 0.9rem;
+  color: #666;
+}

@@ -1,0 +1,43 @@
+.social-media-icons {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+  }
+  
+  .icon {
+    font-size: 30px;
+    color: #f00;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon:hover {
+    background-color: #ddd;
+  }
+  
+  .linkedin {
+    color: #0077b5;
+  }
+  
+  .phone {
+    color: #f00;
+  }
+  
+  .email {
+    color: #d44638;
+  }
+  
+  .whatsapp {
+    color: #25d366;
+  }
+  
+  .telegram {
+    color: #0088cc;
+  }
